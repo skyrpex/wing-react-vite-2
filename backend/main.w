@@ -14,14 +14,14 @@ let myBroadcaster = new broadcaster.Broadcaster() as "Broadcaster";
 let api = new cloud.Api(cors: true);
 let counter = new cloud.Counter();
 
-// let website = new vite.Vite(
-//   root: "{Utils.__dirname()}/../frontend",
-//   publicEnv: {
-//     TITLE: "Wing + Vite + React",
-//     API_URL: api.url,
-//     WS_URL: myBroadcaster.url
-//   }
-// ) as "Vite Website"; 
+let website = new vite.Vite(
+  root: "{Utils.__dirname()}/../frontend",
+  publicEnv: {
+    TITLE: "Wing + Vite + React",
+    API_URL: api.url,
+    WS_URL: myBroadcaster.url
+  }
+) as "Vite Website"; 
 
 api.get("/counter", inflight () => {
   return {
