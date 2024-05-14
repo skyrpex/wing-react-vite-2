@@ -1,6 +1,7 @@
 bring cloud;
 bring expect;
-bring vite;
+// bring vite;
+bring "./vite/vite.w" as vite;
 bring http;
 bring "./broadcaster.w" as broadcaster;
 
