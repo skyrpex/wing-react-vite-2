@@ -41,7 +41,7 @@ if (command === "dev") {
     try {
       server.openBrowser();
     } catch (error) {
-      console.error(error);
+      console.error("Error opening the browser");
     }
   }
 } else if (command === "build") {

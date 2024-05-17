@@ -43,7 +43,7 @@ exports.dev = async (options) => {
   });
 
   child.stderr.on("data", (chunk) => {
-    console.log("vite.cjs dev stderr", chunk.toString());
+    console.error("vite.cjs dev stderr", chunk.toString());
   });
 
   const kill = () => child.kill("SIGINT");
@@ -57,6 +57,9 @@ exports.dev = async (options) => {
           kill,
         });
         child.stdout.removeAllListeners("data");
+        child.stdout.on("data", (chunk) => {
+          console.log(chunk.toString());
+        });
       }
     });
   });
