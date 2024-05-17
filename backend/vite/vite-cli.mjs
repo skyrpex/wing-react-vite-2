@@ -37,13 +37,13 @@ if (command === "dev") {
     })
   );
 
-  if (options.openBrowser) {
-    try {
-      server.openBrowser();
-    } catch (error) {
-      console.error("Error opening the browser");
-    }
-  }
+  // if (options.openBrowser) {
+  //   try {
+  //     server.openBrowser();
+  //   } catch (error) {
+  //     console.error("Error opening the browser");
+  //   }
+  // }
 } else if (command === "build") {
   const resolvedConfig = await resolveConfig(config);
   console.log(
