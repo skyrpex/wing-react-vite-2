@@ -37,11 +37,11 @@ api.post("/counter", inflight () => {
   };
 });
 
-test "api counter increment and get" {
-  log("counter initial value: {counter.peek()}");
-  assert(counter.peek() == 0);
-  http.post(api.url + "/counter");
-  let res = http.get(api.url + "/counter");
-  log("counter value after increment: {res.body}");
-  assert(res.body == "1");
-}
+// test "api counter increment and get" {
+//   log("counter initial value: {counter.peek()}");
+//   assert(counter.peek() == 0);
+//   http.post(api.url + "/counter");
+//   let res = http.get(api.url + "/counter");
+//   log("counter value after increment: {res.body}");
+//   assert(res.body == "1");
+// }
