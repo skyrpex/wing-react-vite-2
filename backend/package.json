@@ -5,9 +5,6 @@
   "author": "Your Name",
   "license": "MIT",
   "wing": true,
-  "scripts": {
-    "postinstall": "cd ../frontend && npm install"
-  },
   "dependencies": {
     "@winglibs/vite": "^0.2.0",
     "@winglibs/websockets": "^0.3.7"
